@@ -1,4 +1,5 @@
 *.tr
+*.traineddata
 deu_frak.freq-dawg
 deu_frak.inttemp
 deu_frak.normproto

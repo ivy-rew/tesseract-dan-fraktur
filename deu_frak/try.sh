@@ -1,11 +1,14 @@
 #!/bin/sh
 
+rm *.tr
+rm *.traineddata
+
 echo "enter language number"
 read n
 lang=deu_frak$n
 bash buildscript.sh
 mv deu_frak.traineddata $lang.traineddata
-sudo cp $lang.traineddata /usr/share/tesseract-ocr/tessdata/
+sudo cp -i -v $lang.traineddata /usr/share/tesseract-ocr/tessdata/
 cd samples
 for f in *.pbm
 do
